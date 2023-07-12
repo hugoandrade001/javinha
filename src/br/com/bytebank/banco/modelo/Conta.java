@@ -1,7 +1,10 @@
-package HerdadoConta;
+package br.com.bytebank.banco.modelo;
 
 import Projeto.Cliente;
-
+/**
+ * Classe que representa a moldura de uma conta
+ * @author Hugo
+ */
 public abstract class Conta {
     protected double saldo;
     private int agencia;
@@ -9,6 +12,11 @@ public abstract class Conta {
     private Projeto.Cliente titular;
     private static int total;
 
+    /**
+     * Construtor da conta
+     * @param agencia
+     * @param numero
+     */
     public Conta(int agencia, int numero){
         Conta.total++;
         System.out.println("O total de contas é " + Conta.total);
@@ -19,7 +27,11 @@ public abstract class Conta {
 
     public abstract void deposita(double valor);
 
-
+    /**
+     * Valor precisa ser maior que o saldo
+     * @param valor
+     * @throws SaldoInsuficienteException
+     */
     public void saca(double valor) throws SaldoInsuficienteException {
         if (this.saldo < valor) {
             throw new SaldoInsuficienteException("Saldo " + this.saldo + "Valor: " + valor);

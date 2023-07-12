@@ -1,8 +1,0 @@
-package HerdadoConta;
-
-public class SeguroDeVida implements Tributavel{
-    @Override
-    public double getValorImposto() {
-        return 42;
-    }
-}
