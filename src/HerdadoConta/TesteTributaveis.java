@@ -13,5 +13,6 @@ public class TesteTributaveis {
         calculadorDeImposto.registra(seguroDeVida);
 
         System.out.println(calculadorDeImposto.getTotalImposto());
+       
     }
 }
