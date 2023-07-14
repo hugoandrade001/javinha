@@ -19,10 +19,9 @@ public abstract class Conta {
      */
     public Conta(int agencia, int numero){
         Conta.total++;
-        System.out.println("O total de contas é " + Conta.total);
         this.agencia = agencia;
         this.numero = numero;
-        System.out.println("Estou criando uma conta " + this.numero);
+
     }
 
     public abstract void deposita(double valor);
@@ -85,5 +84,20 @@ public abstract class Conta {
         return Conta.total;
     }
 
+    @Override
+    public boolean equals(Object ref) {
 
+        Conta outra = (Conta) ref;
+        if (this.agencia != outra.agencia) {
+            return false;
+        } if (this.numero != outra.numero) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Numero: " + this.numero;
+    }
 }
