@@ -1,6 +1,6 @@
 package br.com.bytebank.banco.modelo;
 
-public class Cliente {
+public class Cliente extends Projeto.Cliente {
     private String nome;
     private String cpf;
     private String profissao;

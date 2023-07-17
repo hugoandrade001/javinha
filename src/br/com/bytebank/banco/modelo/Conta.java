@@ -5,7 +5,7 @@ import Projeto.Cliente;
  * Classe que representa a moldura de uma conta
  * @author Hugo
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
     protected double saldo;
     private int agencia;
     private int numero;
@@ -100,4 +100,11 @@ public abstract class Conta {
     public String toString() {
         return "Numero: " + this.numero;
     }
+
+    @Override
+    public int compareTo(Conta outra)  {
+        return Double.compare(this.saldo, outra.saldo);
+    }
+
+
 }
