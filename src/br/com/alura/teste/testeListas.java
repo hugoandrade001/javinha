@@ -1,9 +1,9 @@
-package Collections;
+package br.com.alura.teste;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class teste {
+public class testeListas {
     public static void main(String[] args) {
         String aula1 = "Modelando a classe Aula";
         String aula2 = "Conhecendo mais de listas";
